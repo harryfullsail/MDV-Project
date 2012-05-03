@@ -1,5 +1,5 @@
-// Visual Frameworks Project 4
-// Harry D Lee 4/12
+// MIU Project 1
+// Harry D Lee 5/12
 // main.js
 
 // Wait until the DON is ready.
