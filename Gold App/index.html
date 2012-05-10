@@ -30,12 +30,20 @@
 		<div data-role="header" data-position="fixed">
 			<h1>Book Organizer</h1>
 		</div>
-		
+		<form id="searcgbox" action="">
+			<input id="seacrh" type="text" placeholder="Type here">
+			<a href="http://www.yahoo.com/" data-role="button">Search the Wed</a>
+		</form>
+		<img src="images/book2.png" width="200" height="150" title="Books" />
 		<div data-role="content">
-			<p>Testing jQuery Mobile</p>
-			<p><a href="#author"  data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Author's Name</a></p>
-			<p><a href="#title"  data-theme="b" data-role="button">Book Titles</a></p>
-	
+			<p><a href="MIU/additem.html">Add A Book</a><p>
+			<p><a href="http://www.amazon.com/" data-theme="b" data-role="button">Amazon</a><p>
+			<p><a href="http://www.barnesandnoble.com/" data-theme="b" data-role="button">Barnes and Noble</a></p>
+			<p><a href="http://www.booksamillion.com/" data-theme="b" data-role="button">Books a Million</a></p>
+			<p><a href="http://www.borders.com.au/books/books/50/" data-theme="b" data-role="button">Borders Books</a></p>
+			<p><a href="#author" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Author's Name</a></p>
+			<p><a href="#title" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Book Titles</a></p>
+			<p><a href="#subject" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Subject List</a></p>
 		</div>
 		
 		<div data-role="footer" data-position="fixed">
@@ -51,7 +59,18 @@
 		</div>
 		
 		<div data-role="content">
-			<p>List of Authors</p>
+			<ul data-role="listview">
+				<li>
+					<a>
+						<img src="images/bookcoverch.png" />
+						<h2>Charlaine Harris</h2>
+						<p>Author of the  Sookie Stackhouse Novel's</p>
+					</a>
+				</li>
+				<li>Lauren Oliver</li>
+				<li>Nora Roberts</li>
+				<li>Suzane Collins</li>
+			</ul>
 		</div>
 		
 		<div data-role="footer" data-position="fixed">
@@ -68,6 +87,22 @@
 		
 		<div data-role="content">
 			<p>List of Titles</p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	<div data-role="page" id="subject" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Subject</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>List of Subject</p>
 		</div>
 		
 		<div data-role="footer" data-position="fixed">
