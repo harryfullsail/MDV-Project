@@ -30,20 +30,23 @@
 		<div data-role="header" data-position="fixed">
 			<h1>Book Organizer</h1>
 		</div>
-		<form id="searcgbox" action="">
-			<input id="seacrh" type="text" placeholder="Type here">
-			<a href="http://www.yahoo.com/" data-role="button">Search the Wed</a>
+		<form id="searchbox" action="">
+			<input id="search" type="text" placeholder=href=http://www.yahoo.com/>
+			<input id="submit" type="submit" value="Search">
+			<a href="http://www.yahoo.com/" data-inline="true" data-role="button">Yahoo Search</a>
+			<a href="http://www.google.com/" data-inline="true" data-role="button">Google Search</a>
 		</form>
-		<img src="images/book2.png" width="200" height="150" title="Books" />
+		<img src="images/book2.png" width="400" height="150" title="Books" />
 		<div data-role="content">
 			<p><a href="MIU/additem.html" data-theme="a" data-role="button">Add A Book</a><p>
-			<p><a href="http://www.amazon.com/" data-theme="b" data-role="button">Amazon</a><p>
-			<p><a href="http://www.barnesandnoble.com/" data-theme="b" data-role="button">Barnes and Noble</a></p>
-			<p><a href="http://www.booksamillion.com/" data-theme="b" data-role="button">Books a Million</a></p>
-			<p><a href="http://www.borders.com.au/books/books/50/" data-theme="b" data-role="button">Borders Books</a></p>
+			<p><a href="http://www.amazon.com/" data-icon="search" data-theme="e" data-role="button">Amazon</a><p>
+			<p><a href="http://www.barnesandnoble.com/" data-icon="search" data-theme="e" data-role="button">Barnes and Noble</a></p>
+			<p><a href="http://www.booksamillion.com/" data-icon="search" data-theme="e" data-role="button">Books a Million</a></p>
+			<p><a href="http://www.borders.com.au/books/books/50/" data-icon="search" data-theme="e" data-role="button">Borders Books</a></p>
 			<p><a href="#author" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Author's Name</a></p>
 			<p><a href="#title" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Book Titles</a></p>
 			<p><a href="#subject" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Subject List</a></p>
+			<p><a href="#booksread" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Books Read</a></p>
 		</div>
 		
 		<div data-role="footer" data-position="fixed">
@@ -59,17 +62,78 @@
 		</div>
 		
 		<div data-role="content">
-			<ul data-role="listview">
+		<ul data-role="listview" data-filter="true">
 				<li>
-					<a>
-						<img src="images/bookcoverch.png" />
+					<a> 
+						<img src="images/charlaineharris.png" />
 						<h2>Charlaine Harris</h2>
-						<p>Author of the  Sookie Stackhouse Novel's</p>
+						<p>Author of the Sookie Stackhouse Novel's</p>
 					</a>
 				</li>
-				<li>Lauren Oliver</li>
-				<li>Nora Roberts</li>
-				<li>Suzane Collins</li>
+				<li>
+					<a> 
+						<img src="images/laurenoliver.png" />
+						<h2>Lauren Oliver</h2>
+						<p>Author of the Dellrium Series </p>
+					</a>
+				</li>
+				<li>
+					<a> 
+						<img src="images/noraroberts.png" />
+						<h2>Nora Roberts</h2>
+						<p>test</p>
+					</a>
+				</li>
+				<li>
+					<a> 
+						<img src="images/suzannecollins.png" />
+						<h2>Suzanne Collins</h2>
+						<p>Author of the Hunger Games Series</p>
+					</a>
+				</li>
+				<li>
+					<a> 
+						<img src="images/noimage.png" />
+						<h2>Brandon Sanderson</h2>
+						<p>test</p>
+					</a>
+				</li>
+				<li>
+					<a> 
+						<img src="images/noimage.png" />
+						<h2>Jonathan Stroud</h2>
+						<p>test</p>
+					</a>
+				</li>
+				<li>
+					<a> 
+						<img src="images/giadadelaurentiis.png" />
+						<h2>Giada De Laurentiis</h2>
+						<p>test</p>
+					</a>
+				</li>
+				<li>
+					<a> 
+						<img src="images/noimage.png" />
+						<h2>E L James</h2>
+						<p>test</p>
+					</a>
+				</li>
+				<li>
+					<a> 
+						<img src="images/noimage.png" />
+						<h2>Dr. Seuss</h2>
+						<p>Author of the Dr. Seuss Book</p>
+					</a>
+				</li>
+				<li>
+					<a> 
+						<img src="images/noimage.png" />
+						<h2>Christopher Paolini</h2>
+						<p>test</p>
+					</a>
+				</li>
+				
 			</ul>
 		</div>
 		
@@ -86,31 +150,129 @@
 		</div>
 		
 		<div data-role="content">
-			<p>List of Titles</p>
-		</div>
+			<ul data-role="listview" data-filter="true">
+				<li><a href="#two">
+						<img src="images/bookcoverch.png" />
+						<h2>Deadlocked</h2>
+						<p>Sookie Stackhouse Series, Book 12</p>
+						<p>By Charlaine Harris<p>
+				</a></li>
+		
+				<li><a href="#author">
+						<img src="images/bookcoverchlo.png" />
+						<h2>Delirium</h2>
+						<p> Delirium Series Book 1</p>
+						<p>By Lauren Oliver<p>
+				</a></li>
+				
+				<li><a href="#author">
+						<img src="images/#.png" />
+						<h2>The Last Boyfriend</h2>
+						<p>Inn BoonsBoro Trilogy #2</p>
+						<p>By Nora Roberts<p>
+				</a></li>
+				
+				<li><a href="#author">
+						<img src="images/#.png" />
+						<h2></h2>
+						<p>Series Book 1</p>
+						<p>By Suzanne Collins<p>
+				</a></li>
+				
+				<li><a href="#author">
+						<img src="images/#.png" />
+						<h2></h2>
+						<p>Series Book 1</p>
+						<p>By Brandon Sanderson<p>
+				</a></li>
+				
+				<li><a href="#author">
+						<img src="images/#.png" />
+						<h2></h2>
+						<p> Series Book 1</p>
+						<p>By Jonathan Stroud<p>
+				</a></li>
+				
+				<li><a href="#author">
+						<img src="images/#.png" />
+						<h2></h2>
+						<p>Series Book 1</p>
+						<p>By Giada De Laurentiis<p>
+				</a></li>
+				
+				<li><a href="#author">
+						<img src="images/#.png" />
+						<h2></h2>
+						<p>Series Book 1</p>
+						<p>By E L James<p>
+				</a></li>
+				
+				<li><a href="#author">
+						<img src="images/#.png" />
+						<h2></h2>
+						<p>Series Book 1</p>
+						<p>By Dr. Seuss<p>
+				</a></li>
+				
+				<li><a href="#author">
+						<img src="images/#.png" />
+						<h2></h2>
+						<p>Series Book 1</p>
+						<p>By Christopher Paolini<p>
+				</a></li>
+		</ul>
 		
 		<div data-role="footer" data-position="fixed">
-			<h4>Footer</h4>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+				</ul>
+			</div>
 		</div>
 		
 	</div>
 	
-	<div data-role="page" id="subject" data-add-back-btn="true">
+	<div data-role="page" id="home" data-add-back-btn="true">
+	</div>
+	
+	 
+	 
+	 
+	 <div data-role="page" id="two" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed">
-			<h1>Subject</h1>
+			<h1>Tast</h1>
+			
 		</div>
-		
-		<div data-role="content">
-			<p>List of Subject</p>
-		</div>
+			<div data-role="content">
+			<p>Book Title</p>
+			<p><a href="#title">?</a></p>
+		</div>		
 		
 		<div data-role="footer" data-position="fixed">
 			<h4>Footer</h4>
 		</div>
 		
 	</div>
-
+	
+	
+	<div data-role="page" id="booksread" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>?</h1>
+		</div>
+		<div data-role="content">
+			<p>?</p>
+		</div>		
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
