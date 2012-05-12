@@ -1,5 +1,3 @@
-// write your javascript in here
-
 // MIU Project 1
 // Harry D Lee 5/12
 // main.js
