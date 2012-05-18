@@ -1,1 +1,53 @@
 // write your CSS in here
+
+h1 {
+	margin: 20px 30px; 
+	border: 1px solid black;
+	padding: 10px;
+	color: blue;
+	background: #32CD32;
+		
+}
+
+h2 {
+	margin: 20px 30px; 
+	border: 1px solid black;
+	padding: 10px;
+	color: blue;
+	background: #F87A17;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	
+}
+
+body {
+  background: #6495ED;
+  
+}
+
+legend {
+	font-style: italic;
+	color: #000080;
+	font-family: arial;
+	
+}
+
+
+a {
+	color: #191970;
+}
+
+input {
+	font-family: Times New Roman;
+}
+
+a:hover{color:white;}
+
+
+
+img {
+	margin: 10px 20px;
+}

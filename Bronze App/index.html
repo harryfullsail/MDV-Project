@@ -39,7 +39,7 @@
 		 <img src="images/books.png" data-inline="true" width="200" height="150" title="Books" />
 		 <img src="images/books.png" data-inline="true" width="200" height="150" title="Books" />
 		<div data-role="content">
-			<p><a href="MIU/additem.html" data-theme="a" data-role="button">Add A Book</a><p>
+			<p><a href="additem.html" data-theme="a" data-role="button" data-ajax="false">Add A Book</a><p>
 			<p><a href="http://www.amazon.com/" data-icon="search" data-theme="e">Amazon</a><p>
 			<p><a href="http://www.barnesandnoble.com/" data-icon="search" data-theme="e">Barnes and Noble</a></p>
 			<p><a href="http://www.booksamillion.com/" data-icon="search" data-theme="e">Books a Million</a></p>
@@ -49,6 +49,7 @@
 			<p><a href="#booksread" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Books Read</a></p>
 			<p><a href="#wellread" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Books Well Read</a></p>
 			<p><a href="#mightread" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Book Might Read</a></p>
+			<p><a href="#image" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Image gallery</a></p>
 		</div>
 		
 		<div data-role="footer" data-position="fixed">
@@ -60,7 +61,7 @@
 		</div>
 			
 	<div data-role="page" id="author" data-add-back-btn="true">
-	
+	 
 		<div data-role="header" data-position="fixed">
 			<h1>Author's Name</h1>
 		</div>
@@ -68,78 +69,80 @@
 		<div data-role="content">
 		<ul data-role="listview" data-filter="true">
 				<li>
-					<a> 
+					<a  href="#authorinfo">
 						<img src="images/charlaineharris.png" />
 						<h2>Charlaine Harris</h2>
 						<p>Author of the Sookie Stackhouse Novel's</p>
 					</a>
 				</li>
 				<li>
-					<a> 
+					<a  href="#authorinfo1">
 						<img src="images/laurenoliver.png" />
 						<h2>Lauren Oliver</h2>
 						<p>Author of the Dellrium Series </p>
 					</a>
 				</li>
+		
 				<li>
-					<a> 
+					<a  href="#authorinfo2">
 						<img src="images/noraroberts.png" />
 						<h2>Nora Roberts</h2>
-						<p>test</p>
+						<p>Author of the InnBoosBoro Trilog</p>
 					</a>
 				</li>
 				<li>
-					<a> 
+					<a  href="#authorinfo3">
 						<img src="images/suzannecollins.png" />
 						<h2>Suzanne Collins</h2>
 						<p>Author of the Hunger Games Series</p>
 					</a>
 				</li>
 				<li>
-					<a> 
+					<a  href="#authorinfo4">
 						<img src="images/noimage.png" />
 						<h2>Brandon Sanderson</h2>
-						<p>test</p>
+						<p>Author of the Warbreaker</p>
 					</a>
 				</li>
 				<li>
-					<a> 
+					<a  href="#authorinfo5">
 						<img src="images/noimage.png" />
 						<h2>Jonathan Stroud</h2>
 						<p>test</p>
 					</a>
 				</li>
 				<li>
-					<a> 
+					<a  href="#authorinfo6">
 						<img src="images/giadadelaurentiis.png" />
 						<h2>Giada De Laurentiis</h2>
-						<p>test</p>
+						<p>Author of the Weeknights with Giada:Quick and Simple Recipes to Revamp Dinner</p>
 					</a>
 				</li>
 				<li>
-					<a> 
+					<a  href="#authorinfo7">
 						<img src="images/noimage.png" />
 						<h2>E L James</h2>
-						<p>test</p>
+						<p>Author of the Inheritance Cycle Series</p>
 					</a>
 				</li>
 				<li>
-					<a> 
+					<a href="#authorinfo8">
 						<img src="images/noimage.png" />
 						<h2>Dr. Seuss</h2>
 						<p>Author of the Dr. Seuss Book</p>
 					</a>
 				</li>
 				<li>
-					<a> 
+					<a  href="#authorinfo9">
 						<img src="images/noimage.png" />
 						<h2>Christopher Paolini</h2>
-						<p>test</p>
+						<p>Author of the Inheritance Cycle Series</p>
 					</a>
 				</li>
 				
 			</ul>
 		</div>
+		
 		
 		<div data-role="footer" data-position="fixed">
 			<h4>Footer</h4>
@@ -155,71 +158,71 @@
 		
 		<div data-role="content">
 			<ul data-role="listview" data-filter="true">
-				<li><a href="#two">
+				<li><a href="#book1">
 						<img src="images/bookcoverch.png" />
 						<h2>Deadlocked</h2>
 						<p>Sookie Stackhouse Series, Book 12</p>
 						<p>By Charlaine Harris<p>
 				</a></li>
 		
-				<li><a href="#author">
+				<li><a href="#book2">
 						<img src="images/bookcoverchlo.png" />
 						<h2>Delirium</h2>
 						<p> Delirium Series Book 1</p>
 						<p>By Lauren Oliver<p>
 				</a></li>
 				
-				<li><a href="#author">
-						<img src="images/#.png" />
+				<li><a href="#book3">
+						<img src="images/.png" />
 						<h2>The Last Boyfriend</h2>
 						<p>Inn BoonsBoro Trilogy #2</p>
 						<p>By Nora Roberts<p>
 				</a></li>
 				
-				<li><a href="#author">
-						<img src="images/#.png" />
+				<li><a href="#book4">
+						<img src="images/nobookimage.png" />
 						<h2></h2>
 						<p>Series Book 1</p>
 						<p>By Suzanne Collins<p>
 				</a></li>
 				
-				<li><a href="#author">
-						<img src="images/#.png" />
+				<li><a href="#book5">
+						<img src="images/nobookimage.png" />
 						<h2></h2>
 						<p>Series Book 1</p>
 						<p>By Brandon Sanderson<p>
 				</a></li>
 				
-				<li><a href="#author">
-						<img src="images/#.png" />
+				<li><a href="#book6">
+						<img src="images/nobookimage.png" />
 						<h2></h2>
 						<p> Series Book 1</p>
 						<p>By Jonathan Stroud<p>
 				</a></li>
 				
-				<li><a href="#author">
-						<img src="images/#.png" />
+				<li><a href="#book7">
+						<img src="images/nobookimage.png" />
 						<h2></h2>
 						<p>Series Book 1</p>
 						<p>By Giada De Laurentiis<p>
 				</a></li>
 				
-				<li><a href="#author">
-						<img src="images/#.png" />
+				<li><a href="#book8">
+						<img src="images/nobookimage.png" />
 						<h2></h2>
 						<p>Series Book 1</p>
 						<p>By E L James<p>
 				</a></li>
 				
-				<li><a href="#author">
-						<img src="images/#.png" />
+				<li><a href="#book9">
+						<img src="images/nobookimage.png" />
 						<h2></h2>
 						<p>Series Book 1</p>
 						<p>By Dr. Seuss<p>
 				</a></li>
 				
-				<li><a href="#author">
-						<img src="images/#.png" />
+				<li><a href="#book10">
+						<img src="images/nobookimage.png" />
 						<h2></h2>
 						<p>Series Book 1</p>
 						<p>By Christopher Paolini<p>
@@ -230,7 +233,7 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home">Home</a></li>
-					<li><a href="#">Two</a></li>
+					<li><a href="#link">Link to gold App</a></li>
 					<li><a href="#">Three</a></li>
 				</ul>
 			</div>
@@ -239,6 +242,8 @@
 	</div>
 	
 	<div data-role="page" id="home" data-add-back-btn="true">
+	<div data-role="page" id="link" data-add-back-btn="true">
+	</div>
 	</div>
 	
 	 
@@ -258,25 +263,801 @@
 		<div data-role="footer" data-position="fixed">
 			<h4>Footer</h4>
 		</div>
-		
+		</div>
 	</div>
-	
 	
 	<div data-role="page" id="booksread" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed">
-			<h1>?</h1>
+			<h1>Books Read</h1>
 		</div>
 		<div data-role="content">
-			<p>?</p>
+		<ul data-role="listview" data-filter="true">
+		<li><a href="#book9">
+				<img src="images/nobookimage.png" />
+				<h2>Cat In The Hat</h2>
+				<p></p>
+				<p>By Dr. Seuss</p>
+		</a></li>
+		<li><a href="#book5">
+				<img src="images/nobookimage.png" />
+				<h2>Warbreaker</h2>
+				<p></p>
+				<p>By Brandon Sanderson</p>
+		</a></li>
+		<li><a href="#book1">
+				<img src="images/bookcoverch.png" />
+				<h2>Deadlocked</h2>
+				<p>Sookie Stackhouse Series, Book 12</p>
+				<p>By Charlaine Harris</p>
+		</a></li>
+		<li><a href="#book6">
+				<img src="images/nobookimage.png" />
+				<h2>Bartimaeus</h2>
+				<p>The Ring of Solomon Series, Book 1</p>
+				<p>By Jonathan Stroud</p>
+		</a></li>
+			
+		</ul>
+		
 		</div>		
 		
 		<div data-role="footer" data-position="fixed">
 			<h4>Footer</h4>
 		</div>
 		
-		</div>
+	</div>
 	
+	</div>
+	
+	<div data-role="page" id="wellread" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Well Read</h1>
+		</div>
+		<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+		<li><a href="#book2">
+				<img src="images/bookcoverchlo.png" />
+				<h2>Delirium</h2>
+				<p> Delirium Series Book 1</p>
+				<p>By Lauren Oliver</p>
+		</a></li>
+		<li><a href="#book3">
+				<img src="images/nobookimage.png" />
+				<h2>The Last Boyfriend</h2>
+				<p>Inn BoonsBoro Trilogy #2</p>
+				<p>By Nora Roberts</p>
+		</a></li>
+		<li><a href="#book7">
+				<img src="images/nobookimage.png" />
+				<h2>Weeknights with Giada: </h2>
+				<h2>Quick and Simple Recipes to Revamp Dinner</h2> 
+				<p>By Giada De Laurentiis</p>
+		</a></li>
+		</ul>
+		</div>
+		
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="mightread" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Might Read</h1>
+		</div>
+		<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+		<li><a href="#book8">
+				<img src="images/nobookimage.png" />
+				<h2>Fifty Shades of Grey </h2>
+				<p>Inheritance Cycle Series, #4</p>
+				<p>By E L James</p>
+		</a></li>
+		</ul>
+		</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+		<div data-role="page" id="book1" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Book info</h1>
+		</div>
+		<div data-role="content">
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>Deadlocked</h3>
+				<p>Read this book</p>
+				<p>Date Raid: 4/30/10</p>
+				<p></p>
+				<p>Product Details</p>
+				<h2>Title: Deadlocked</h2>
+				<p>Publication date: 5/1/2012</p>
+				<h1>By: Charlains Harris</h1>
+				<p>Series: Sookie Stackhouse/Southern Vampire Series, #12</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating: 10</p>
+		    </div>
+		    
+		    <div data-role="collapsible" data-theme="a">
+				<h3>Delirium</h3>
+				<p>Read this book</p>
+				<p>Date Raid:</p>
+				<p></p>
+				<p>Product Details</p>
+				<h2>Title: Delirium</h2>
+				<p>Publication date: 2/28/2012</p>
+				<h1>By: Lauren Oliver</h1>
+				<p>Series: Delirium Series , #2</p>
+				<p>Age range: Teen</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating: 9</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>The Last Boyfriend</h3>
+				<p>Have not read this book</p>
+				<p>Date Raid:</p>
+				<p><p>
+				<p>Product Details</p>
+				<h2>Title:The Last Boyfriend </h2>
+				<p>Publication date: 5/1/2012</p>
+				<h1>By: Nora Roberts</h1>
+				<p>Series: Inn BoonsBoro Trilogy , #2</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Romance</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>The hunger Games</h3>
+				<p>Read this book</p>
+				<p>Date Raid:</p>
+				<p><p>
+				<p>Product Details</p>
+				<h2>Title: The Hunger Games </h2>
+				<p>Publication date: 7/1/2010</p>
+				<h1>By: Suzane Collins</h1>
+				<p>Series: Hunger Games Series , #1</p>
+				<p>Age range: Teen</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>Warbreaker</h3>
+				<p>Have not read this book</p>
+				<p>Date Raid:</p>
+				<p>Product Details<p>
+				<p></p>
+				<h2>Title: Warbreaker</h2>
+				<p>Publication date: 3/30/2010</p>
+				<h1>By: Brandon Sanderson</h1>
+				<p>Series:</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+					<h3>Bartimaeus</h3>
+					<p>Read this book</p>
+					<p>Date Raid: 4/30/2011</p>
+					<p><p>
+					<p>Product Details</p>
+					<h2>Title: Bartimaeus</h2>
+					<p>Publication date: 1/24/2012</p>
+					<h1>By: Jonathan Stroud</h1>
+					<p>Series:</p>
+					<p>Age range: Adult</p>
+					<p>Genre: Fiction</p>
+					<p>Subjet: Science Fiction & Fantasy</p>
+					<p>Description of Book:</p>
+					<p>Rating:</p>
+				</div>
+				
+				<div data-role="collapsible" data-theme="a">
+				<h3>Weekning with Giada Quick and simple Recipes to Revamp Dinner</h3>
+				<p>Have not read this book</p>
+				<p>Date Raid:</p>
+				<p><p>
+				<p>Product Details</p>
+				<h2>Title: Weeknights with Giada: Quick and Simple Recipes to Revamp Dinner</h2>
+				<p>Publication date: 3/27/2012</p>
+				<h1>By: Giada De Laurentiis</h1>
+				<p>Series:</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Nonfiction</p>
+				<p>Subjet: Cookbook</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+					<h3>Fifty Shades of Grey</h3>
+					<p>Might read this book</p>
+					<p>Date Raid:</p>
+					<p><p>
+					<p>Product Details</p>
+					<h2>Title: Fifty Shades of Grey </h2>
+					<p>Publication date: 4/3/2012</p>
+					<h1>By: E L James</h1>
+					<p>Series: Fifty Shades Trilogy #1</p>
+					<p>Age range: Adult</p>
+					<p>Genre: Fiction</p>
+					<p>Subjet:Romance</p>
+					<p>Description of Book:</p>
+					<p>Rating:</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>Cat In Hat</h3>
+				<p>Read this book</p>
+				<p>Date Raid:4/30/1975</p>
+				<p></P>
+				<p>Publication date:<p>
+				<p>Product Details</p>
+				<h2>Title: Cat In The Hat</h2>
+				<p>Series:</p>
+				<h1>By: Dr. Seuss</h1>
+				<p>Age range: 0-2</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Early Readers</p>
+				<p>Description of Book:</p>
+				<p>Rating: 10</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>Inheritance</h3>
+				<p></p>
+				<p>Date Raid:</p>
+				<p>Date Raid: 4/30/2012<p>
+				<p>Product Details</p>
+				<h2>Title:Inheritance</h2>
+				<p>Publication date: 11/8/2011</p>
+				<h1>By: Christopher Paolini</h1>
+				<p>Series: Inheritance Cycle Series , #4</p>
+				<p>Age range: 12 - 17 Years</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+				
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="book2" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Book info</h1>
+		</div>
+		<div data-role="content">
+		
+			<div data-role="collapsible">
+				<h3>?</h3>
+				<p>Read this book</p>
+				<p>Date Raid:</p>
+				<p></p>
+				<p>Product Details</p>
+				<h2>Title: Delirium</h2>
+				<p>Publication date: 2/28/2012</p>
+				<h1>By: Lauren Oliver</h1>
+				<p>Series: Delirium Series , #2</p>
+				<p>Age range: Teen</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating: 9</p>
+			</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="book3" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Book info</h1>
+		</div>
+		<div data-role="content">
+		
+		<div data-role="collapsible">
+				<h3>?</h3>
+				<p>Have not read this book</p>
+				<p>Date Raid:</p>
+				<p><p>
+				<p>Product Details</p>
+				<h2>Title:The Last Boyfriend </h2>
+				<p>Publication date: 5/1/2012</p>
+				<h1>By: Nora Roberts</h1>
+				<p>Series: Inn BoonsBoro Trilogy , #2</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Romance</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="book4" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Book info</h1>
+		</div>
+		<div data-role="content">
+		
+			<div data-role="collapsible">
+				<h3>?</h3>
+				<p>Read this book</p>
+				<p>Date Raid:</p>
+				<p><p>
+				<p>Product Details</p>
+				<h2>Title: The Hunger Games </h2>
+				<p>Publication date: 7/1/2010</p>
+				<h1>By: Suzane Collins</h1>
+				<p>Series: Hunger Games Series , #1</p>
+				<p>Age range: Teen</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="book5" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Book info</h1>
+		</div>
+		<div data-role="content">
+		
+			<div data-role="collapsible">
+				<h3>?</h3>
+				<p>Have not read this book</p>
+				<p>Date Raid:</p>
+				<p>Product Details<p>
+				<p></p>
+				<h2>Title: Warbreaker</h2>
+				<p>Publication date: 3/30/2010</p>
+				<h1>By: Brandon Sanderson</h1>
+				<p>Series:</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="book6" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Book info</h1>
+		</div>
+			<div data-role="content">
+			
+				<div data-role="collapsible">
+					<h3>?</h3>
+					<p>Read this book</p>
+					<p>Date Raid: 4/30/2011</p>
+					<p><p>
+					<p>Product Details</p>
+					<h2>Title: Bartimaeus</h2>
+					<p>Publication date: 1/24/2012</p>
+					<h1>By: Jonathan Stroud</h1>
+					<p>Series:</p>
+					<p>Age range: Adult</p>
+					<p>Genre: Fiction</p>
+					<p>Subjet: Science Fiction & Fantasy</p>
+					<p>Description of Book:</p>
+					<p>Rating:</p>
+				</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="book7" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Book info</h1>
+		</div>
+		<div data-role="content">
+		
+			<div data-role="collapsible">
+					<h3>?</h3>
+				<p>Have not read this book</p>
+				<p>Date Raid:</p>
+				<p><p>
+				<p>Product Details</p>
+				<h2>Title: Weeknights with Giada: Quick and Simple Recipes to Revamp Dinner</h2>
+				<p>Publication date: 3/27/2012</p>
+				<h1>By: Giada De Laurentiis</h1>
+				<p>Series:</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Nonfiction</p>
+				<p>Subjet: Cookbook</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="book8" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Book info</h1>
+		</div>
+		<div data-role="content">
+		
+			<div data-role="collapsible">
+					<h3>?</h3>
+					<p>Might read this book</p>
+					<p>Date Raid:</p>
+					<p><p>
+					<p>Product Details</p>
+					<h2>Title: Fifty Shades of Grey </h2>
+					<p>Publication date: 4/3/2012</p>
+					<h1>By: E L James</h1>
+					<p>Series: Fifty Shades Trilogy #1</p>
+					<p>Age range: Adult</p>
+					<p>Genre: Fiction</p>
+					<p>Subjet:Romance</p>
+					<p>Description of Book:</p>
+					<p>Rating:</p>
+			</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="book9" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Book info</h1>
+		</div>
+		<div data-role="content">
+		
+			<div data-role="collapsible">
+				<h3>?</h3>
+				<p>Read this book</p>
+				<p>Date Raid:4/30/1975</p>
+				<p></P>
+				<p>Publication date:<p>
+				<p>Product Details</p>
+				<h2>Title: Cat In The Hat</h2>
+				<p>Series:</p>
+				<h1>By: Dr. Seuss</h1>
+				<p>Age range: 0-2</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Early Readers</p>
+				<p>Description of Book:</p>
+				<p>Rating: 10</p>
+			</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="book10" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Book info</h1>
+		</div>
+		<div data-role="content">
+		
+			<div data-role="collapsible">
+				<h3>?</h3>
+				<p>Read this book</p>
+				<p>Date Raid:4/30/1975</p>
+				<p></P>
+				<p>Publication date:<p>
+				<p>Product Details</p>
+				<h2>Title: Cat In The Hat</h2>
+				<p>Series:</p>
+				<h1>By: Dr. Seuss</h1>
+				<p>Age range: 0-2</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Early Readers</p>
+				<p>Description of Book:</p>
+				<p>Rating: 10</p>
+			</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="image" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Tast</h1>
+		<d/iv>
+		
+		<div data-role="content">
+		<div data-role="collapsible" data-theme="a">
+				<h3>Deadlocked</h3>
+				<p>Read this book</p>
+				<p>Date Raid: 4/30/10</p>
+				<p></p>
+				<p>Product Details</p>
+				<h2>Title: Deadlocked</h2>
+				<p>Publication date: 5/1/2012</p>
+				<h1>By: Charlains Harris</h1>
+				<p>Series: Sookie Stackhouse/Southern Vampire Series, #12</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating: 10</p>
+		    </div>
+		    
+		    <div data-role="collapsible" data-theme="a">
+				<h3>Delirium</h3>
+				<p>Read this book</p>
+				<p>Date Raid:</p>
+				<p></p>
+				<p>Product Details</p>
+				<h2>Title: Delirium</h2>
+				<p>Publication date: 2/28/2012</p>
+				<h1>By: Lauren Oliver</h1>
+				<p>Series: Delirium Series , #2</p>
+				<p>Age range: Teen</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating: 9</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>The Last Boyfriend</h3>
+				<p>Have not read this book</p>
+				<p>Date Raid:</p>
+				<p><p>
+				<p>Product Details</p>
+				<h2>Title:The Last Boyfriend </h2>
+				<p>Publication date: 5/1/2012</p>
+				<h1>By: Nora Roberts</h1>
+				<p>Series: Inn BoonsBoro Trilogy , #2</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Romance</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>The hunger Games</h3>
+				<p>Read this book</p>
+				<p>Date Raid:</p>
+				<p><p>
+				<p>Product Details</p>
+				<h2>Title: The Hunger Games </h2>
+				<p>Publication date: 7/1/2010</p>
+				<h1>By: Suzane Collins</h1>
+				<p>Series: Hunger Games Series , #1</p>
+				<p>Age range: Teen</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>Warbreaker</h3>
+				<p>Have not read this book</p>
+				<p>Date Raid:</p>
+				<p>Product Details<p>
+				<p></p>
+				<h2>Title: Warbreaker</h2>
+				<p>Publication date: 3/30/2010</p>
+				<h1>By: Brandon Sanderson</h1>
+				<p>Series:</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+					<h3>Bartimaeus</h3>
+					<p>Read this book</p>
+					<p>Date Raid: 4/30/2011</p>
+					<p><p>
+					<p>Product Details</p>
+					<h2>Title: Bartimaeus</h2>
+					<p>Publication date: 1/24/2012</p>
+					<h1>By: Jonathan Stroud</h1>
+					<p>Series:</p>
+					<p>Age range: Adult</p>
+					<p>Genre: Fiction</p>
+					<p>Subjet: Science Fiction & Fantasy</p>
+					<p>Description of Book:</p>
+					<p>Rating:</p>
+				</div>
+				
+				<div data-role="collapsible" data-theme="a">
+				<h3>Weekning with Giada Quick and simple Recipes to Revamp Dinner</h3>
+				<p>Have not read this book</p>
+				<p>Date Raid:</p>
+				<p><p>
+				<p>Product Details</p>
+				<h2>Title: Weeknights with Giada: Quick and Simple Recipes to Revamp Dinner</h2>
+				<p>Publication date: 3/27/2012</p>
+				<h1>By: Giada De Laurentiis</h1>
+				<p>Series:</p>
+				<p>Age range: Adult</p>
+				<p>Genre: Nonfiction</p>
+				<p>Subjet: Cookbook</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+					<h3>Fifty Shades of Grey</h3>
+					<p>Might read this book</p>
+					<p>Date Raid:</p>
+					<p><p>
+					<p>Product Details</p>
+					<h2>Title: Fifty Shades of Grey </h2>
+					<p>Publication date: 4/3/2012</p>
+					<h1>By: E L James</h1>
+					<p>Series: Fifty Shades Trilogy #1</p>
+					<p>Age range: Adult</p>
+					<p>Genre: Fiction</p>
+					<p>Subjet:Romance</p>
+					<p>Description of Book:</p>
+					<p>Rating:</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>Cat In Hat</h3>
+				<p>Read this book</p>
+				<p>Date Raid:4/30/1975</p>
+				<p></P>
+				<p>Publication date:<p>
+				<p>Product Details</p>
+				<h2>Title: Cat In The Hat</h2>
+				<p>Series:</p>
+				<h1>By: Dr. Seuss</h1>
+				<p>Age range: 0-2</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Early Readers</p>
+				<p>Description of Book:</p>
+				<p>Rating: 10</p>
+			</div>
+			
+			<div data-role="collapsible" data-theme="a">
+				<h3>Inheritance</h3>
+				<p></p>
+				<p>Date Raid:</p>
+				<p>Date Raid: 4/30/2012<p>
+				<p>Product Details</p>
+				<h2>Title:Inheritance</h2>
+				<p>Publication date: 11/8/2011</p>
+				<h1>By: Christopher Paolini</h1>
+				<p>Series: Inheritance Cycle Series , #4</p>
+				<p>Age range: 12 - 17 Years</p>
+				<p>Genre: Fiction</p>
+				<p>Subjet: Science Fiction & Fantasy</p>
+				<p>Description of Book:</p>
+				<p>Rating:</p>
+			</div>
+		
+		
+			
+			<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+		 <div data-role="page" id="link" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Link to GH Gold Page</h1>
+			
+		</div>
+			<div data-role="content">
+			<p>Link</p>
+			<p><a href="http://harryfullsail.github.com/MDV-Project/Gold%20App/" data-icon="search" data-theme="e">Gold App</a></p>
+			
+		</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
 	</div>
 
 	<!-- JavaScript under here -->

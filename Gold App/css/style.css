@@ -1,3 +1,11 @@
 // write your CSS in here
 
+/*label.error{display:block; margin:10px 0, color:#cc0000;}*/
+
+#berrorslink{display:none;}
+
+#reqiredfield{color:blue;}
+
+#fielderrors{color:red;}
+
 
