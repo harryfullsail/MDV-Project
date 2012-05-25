@@ -17,6 +17,8 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile.structure-1.1.0.min.css" />
+	<link rel="stylesheet" href="themes/miu.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	
 	
@@ -26,39 +28,60 @@
 </head>
 <body>
 
-	<div data-role="page" id="home" data-theme="e">
+	<div data-role="page" id="home" data-theme="f">
 	
 		<div data-role="header" data-position="fixed">
 			<h1>Book Organizer</h1>
 		</div>
-		<form id="searchbox" action="">
-			<input id="search" type="text" placeholder=href=http://www.yahoo.com/>
-			<input id="submit" type="submit" value="Search">
-			<a href="http://www.yahoo.com/" data-inline="true" data-role="button">Yahoo Search</a>
-			<a href="http://www.google.com/" data-inline="true" data-role="button">Google Search</a>
+		
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#tabe1" class="ui-btn-active">Description</a></li>
+					<li><a href="#tabe2">Help</a></li>
+				</ul>
+			</div>
+			
+		
+		<form id="searchbox" action="http://www.yahoo.com/">
+			<input id="search" type="text" placeholder=Yahoo />
+			<input id="submit" type="submit" value="Search" />
+			<a href="http://www.yahoo.com/" data-mini="true" data-inline="true" data-role="button">Yahoo Search</a>
+			<a href="http://www.google.com/" data-mini="true" data-inline="true" data-role="button">Google Search</a>
+			<a href="http://www.msn.com/" data-mini="true" data-inline="true" data-role="button">MSN Search</a>
 		</form>
-		<img src="images/book2.png" width="400" height="200" title="Books" />
+		
+		<div>
+			<ul>
+				<img src="images/logo2.png" width="200" height="100" title="Logo"/>
+				<img src="images/book2.png" width="400" height="200" title="Books" />
+				<p>There are alwaye so many wonderful books to read, and how do you keep track of them all.  Well by using an book organizer.</p>
+			</ul
+		</div>
+		
 		<div data-role="content">
-			<p><a href="additem.html" data-theme="a" data-role="button" data-ajax="false">Add A Book</a><p>
+			<p><a href="#addbookinfo" data-theme="a" data-role="button" data-ajax="false">Add A Book</a><p>
 			<p><a href="http://www.amazon.com/" data-icon="search" data-theme="e" data-role="button">Amazon</a><p>
 			<p><a href="http://www.barnesandnoble.com/" data-icon="search" data-theme="e" data-role="button">Barnes and Noble</a></p>
 			<p><a href="http://www.booksamillion.com/" data-icon="search" data-theme="e" data-role="button">Books a Million</a></p>
 			<p><a href="http://www.borders.com.au/books/books/50/" data-icon="search" data-theme="e" data-role="button">Borders Books</a></p>
 			<p><a href="#author" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Author's Name</a></p>
 			<p><a href="#title" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Book Titles</a></p>
-			<p><a href="#booksread" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Books Read</a></p>
-			<p><a href="#wellread"  data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Books Well Read</a></p>
-			<p><a href="#mightread" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Book Might Read</a></p>
+			<p><a href="#booksread" data-theme="f" data-role="button" data-icon="arrow-r" data-iconpos="right">Books Read</a></p>
+			<p><a href="#wellread"  data-theme="f" data-role="button" data-icon="arrow-r" data-iconpos="right">Books Well Read</a></p>
+			<p><a href="#mightread" data-theme="f" data-role="button" data-icon="arrow-r" data-iconpos="right">Book Might Read</a></p>
 	
 		</div>
+		</div>
+		
 		
 		<div data-role="footer" data-position="fixed">
 			<h4>Footer</h4>
 		</div>
 		
 	</div>
+	
 			
-	<div data-role="page" id="author" data-add-back-btn="true">
+	<div data-role="page" id="author" data-theme="f" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed">
 			<h1>Author's Name</h1>
@@ -84,7 +107,7 @@
 					<a	href="#authorinfo2">
 						<img src="images/noraroberts.png" />
 						<h2>Nora Roberts</h2>
-						<p>test</p>
+						<p>Author of the Inn BoonsBoro Trilogy</p>
 					</a>
 				</li>
 				<li>
@@ -98,28 +121,28 @@
 					<a	href="#authorinfo4">
 						<img src="images/noimage.png" />
 						<h2>Brandon Sanderson</h2>
-						<p>test</p>
+						<p>Author of the Warbreaker</p>
 					</a>
 				</li>
 				<li>
 					<a	href="#authorinfo5">
 						<img src="images/noimage.png" />
 						<h2>Jonathan Stroud</h2>
-						<p>test</p>
+						<p>Author of the Ring of Solomon</p>
 					</a>
 				</li>
 				<li>
 					<a 	href="#authorinfo6">
 						<img src="images/giadadelaurentiis.png" />
 						<h2>Giada De Laurentiis</h2>
-						<p>test</p>
+						<p>Author of the Giada cook books</p>
 					</a>
 				</li>
 				<li>
 					<a 	href="#authorinfo7">
 						<img src="images/noimage.png" />
 						<h2>E L James</h2>
-						<p>test</p>
+						<p>Author of the Fifty Shades Trilogy</p>
 					</a>
 				</li>
 				<li>
@@ -133,7 +156,7 @@
 					<a 	href="#authorinfo9">
 						<img src="images/noimage.png" />
 						<h2>Christopher Paolini</h2>
-						<p>test</p>
+						<p>Author of the Inheritance Cycle Series</p>
 					</a>
 				</li>
 				
@@ -148,15 +171,25 @@
 		</div>
 		
 	<div data-role="footer" data-position="fixed">
-				<h4>Footer</h4>
+	<div data-role="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#links">Link</a></li>
+					<li><a href="#addbookinfo">Add a Book</a></li>
+				</ul>
+			</div>
 		</div>
 		
 	</div>
 	
+	<div data-role="page" id="home" data-add-back-btn="true">
+	<div data-role="page" id="links" data-add-back-btn="true">
+	<div data-role="page" id="addbookinfo" data-add-back-btn="true">
 	</div>
-		
+	</div>
+	</div>
 	
-	<div data-role="page" id="title" data-add-back-btn="true">
+	<div data-role="page" id="title" data-theme="f" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed">
 			<h1>Book Titles</h1>
@@ -280,6 +313,7 @@
 			<div data-role="content">
 			<p>Book Title</p>
 			<p><a href="#title">?</a></p>
+		</div>
 		</div>		
 		
 		<div data-role="footer" data-position="fixed">
@@ -291,7 +325,7 @@
 	</div>
 	
 	
-	<div data-role="page" id="booksread" data-add-back-btn="true">
+	<div data-role="page" id="booksread" data-theme="f" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed">
 			<h1>Books Read</h1>
@@ -325,7 +359,8 @@
 			
 		</ul>
 		
-		</div>		
+		</div>
+				
 		
 		<div data-role="footer" data-position="fixed">
 			<h4>Footer</h4>
@@ -335,7 +370,7 @@
 	
 	</div>
 	
-	<div data-role="page" id="wellread" data-add-back-btn="true">
+	<div data-role="page" id="wellread" data-theme="f" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed">
 			<h1>Well Read</h1>
@@ -371,7 +406,7 @@
 	
 	</div>
 	
-	<div data-role="page" id="mightread" data-add-back-btn="true">
+	<div data-role="page" id="mightread" data-theme="f" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed">
 			<h1>Might Read</h1>
@@ -723,7 +758,7 @@
 				
 				<div data-role="fieldcontain">
 					<label for ="author">Author Name: required field</label>
-					<input type="text" name="author" id="author" />
+					<input type="text" name="author" id="author" placeholder="First name then Last name" />
 					<p>First name and Last name</p> 
 					
 				</div>
@@ -1153,8 +1188,46 @@
 	</div>
 	
 	</div>
+	
+	<div data-role="page" id="tabe1" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Tabe</h1>
+		</div>
+		<div data-role="content">
+		<p>This is an app that will allow you to keep track of all the books you have read, and the authors in a List format.</p>
+		<p> You can keep track of those upcoming book that you may want to read and there publishing date or a list of book you just like to read.</p>
+		</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
+	
+	<div data-role="page" id="tabe2" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Help</h1>
+		</div>
+		<div data-role="content">
+		<p></p>
+		</div>
+				
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+		
+	</div>
+	
+	</div>
 	<!-- JavaScript under here -->
 	<script src="MIU/js/json.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	<script type="text/javascript" src="js/main"></script>
