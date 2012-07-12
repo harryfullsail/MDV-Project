@@ -5,33 +5,24 @@
 
 // Wait until the DON is ready.
 window.addEventListener("DOMContentLoaded", function(){
-
-
-  
-
-
-
-
-// variable defaults
-    var ageGroup = ["--Select Age Group--", "0-2", "3-5", "6-8", "9-12", "Teen", "Adult" ],
-        genreValue,
-        errMsg = ('errors');
-    ;
-   
-   
-
-    
     
     //getElementById Function
-        function g(x){
+        function $(x){
             var theElement = document.getElementById(x);
             return theElement;
     }
     
+    // variable defaults
+    var ageGroup = ["--Select Age Group--", "0-2", "3-5", "6-8", "9-12", "Teen", "Adult" ],
+        genreValue,
+        errMsg = $('errors');
+    ;
+    
+    
          //Creating a select field element and option
     function makeCats(){
         var formTag = document.getElementsByTagName("form"), // this is a array of all the from tags.
-            selectLi = g('select'),
+            selectLi = $('select'),
             makeSelect = document.createElement('select');
             makeSelect.setAttribute("id", "age");
         for(var i=0, j=ageGroup.length; i<j; i++){
@@ -44,10 +35,8 @@ window.addEventListener("DOMContentLoaded", function(){
         selectLi.appendChild(makeSelect);
     }
     
-     makeCats();
-     
+    makeCats();
     
-     
     //find the value of selected checkbox button.
     function getSelectedcheckbox(){
         var checkbox = document.forms[0].genre;
@@ -61,17 +50,17 @@ window.addEventListener("DOMContentLoaded", function(){
     function toggleControls(n){
         switch(n){
             case "on":
-                g('bookForm').style.display = "none";
-                g('clear').style.display = "inline";
-                g('displayLink').style.display = "none";
-                g('addNew').style.display = "inline";
+                $('bookForm').style.display = "none";
+                $('clear').style.display = "inline";
+                $('displayLink').style.display = "none";
+                $('addNew').style.display = "inline";
                 break;
             case "off":
-                g('bookForm').style.display = "block";
-                g('clear').style.display = "inline";
-                g('displayLink').style.display = "inline";
-                g('addNew').style.display = "none";
-                g('items').style.display = "none";
+                $('bookForm').style.display = "block";
+                $('clear').style.display = "inline";
+                $('displayLink').style.display = "inline";
+                $('addNew').style.display = "none";
+                $('items').style.display = "none";
                 break;
             default:
                 return false;
@@ -79,10 +68,7 @@ window.addEventListener("DOMContentLoaded", function(){
         }
     }
     
-    
-     
-     
-    
+   
     function storeData(key){
         //Set the id to the existing key so it will save over the date.
         //The key is the sme key to be passed along the from the editsubmit event handler
@@ -96,15 +82,23 @@ window.addEventListener("DOMContentLoaded", function(){
         //Object properties contain array with the form label and iput value.
         getSelectedcheckbox();
         var item                        = {};
-            item.lists                  = ["Lists:", g('lists').value];
-            item.author                 = ["Author:", g('author').value];
-            item.title                  = ["Title:", g('title').value];
-            item.date                   = ["Date", g('date').value];
-            item.genre                  = ["Genre:", genreValue];
-            item.age                    = ["Age:", g('age').value];
-            item.subject                = ["Subject:", g('subject').value];
-            item.rate                   = ["Rate", g('rate').value];
-            item.comments               = ["Comments", g('comments').value];
+            item.lists                    = ["Lists:", $('lists').value];
+            item.author                    = ["Author:", $('author').value];
+            item.date1                    = ["Date1", $('date1').value];
+            item.website                = ["Website", $('website').value];
+            item.birth                    = ["Birth", $('birth').value];
+            item.biography                = ["Biography", $('biography').value];
+            item.books                    = ["Books", $('books').value];
+            item.title                    = ["Title:", $('title').value];
+            item.author1                = ["Author1", $('author1').value];
+            item.date2                    = ["Date2", $('date2').value];
+            item.description            = ["Description", $('description').value];
+            item.date                    = ["Date", $('date').value];
+            item.genre                    = ["Genre:", genreValue];
+            item.age                    = ["Age:", $('age').value];
+            item.subject                = ["Subject:", $('subject').value];
+            item.rate                    = ["Rate", $('rate').value];
+            item.comments                = ["Comments", $('comments').value];
         //Save data into Local Storage: Use Stringify to convert our object to a string.
         localStorage.setItem("id", JSON.stringify(item));
         alert("Save");
@@ -119,8 +113,7 @@ window.addEventListener("DOMContentLoaded", function(){
         imageLi.appendChild(newImg);
     }
     
-  
-          //Auto Populate Local Storage
+     //Auto Populate Local Storage
     function autoFillData(){
         //The actual JSON OBJECT date required for this to work is coming from our json.js.
         //Store the JSON OBJECT into our Local Storage.
@@ -129,8 +122,8 @@ window.addEventListener("DOMContentLoaded", function(){
             localStorage.setItem(id, JSON.stringify(JSON[n]));    
         }
     }
-           
-   function getData(){
+    
+    function getData(){
         toggleControls("on");
         if(localStorage.length === 0){
             alert("There is no data in Local Storage so default data was added.");
@@ -143,7 +136,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var makeList = document.createElement('ul');
         makeDiv.appendChild(makeList);
         document.body.appendChild(makeDiv);
-        g('items').style.display = "block";
+        $('items').style.display = "block";
         for(var i=0, len=localStorage.length; i<len;i++){
             var makeli = document.createElement('li');
             var linksLi = document.createElement('li');
@@ -161,14 +154,12 @@ window.addEventListener("DOMContentLoaded", function(){
                 var optSubText = obj[n][0]+" "+obj[n][1];
                 makeSubli.innerHTML = optSubText;
                 makeSubList.appendChild(linksLi);
-            }       
+            }
             makeItemLinks(localStorage.key(i), linksLi); //Creat our edit and delete buttons link for our item in local storage.
         }
     }
     
-
-    
-      
+   
     function editItem(){
         //Get the date from our item form in local storage.
         var value = localStorage.getItem(this.key);
@@ -176,13 +167,20 @@ window.addEventListener("DOMContentLoaded", function(){
         
         //show the from
         toggleControls("off");
-         
         
         //poplate the form fields with current localStorage values.
-        g('lists').value = item.lists[1];
-        g('author').value = item.author[1];
-        g('title').value = item.title[1];
-        g('date').value = item.date[1];
+        $('lists').value = item.lists[1];
+        $('author').value = item.author[1];
+        $('date1').value = item.date1[1];
+        $('website').value = item.website[1];
+        $('birth').value = item.birth[1];
+        $('biography').value = item.biography[1];
+        $('books').value = item.books[1];
+        $('title').value = item.title[1];
+        $('author1').value = item.author1[1];
+        $('date2').value = item.date2[1];
+        $('description').value = item.description[1];
+        $('date').value = item.date[1];
         var checkbox = document.forms(0).genre;
         for (var i=0; i<checkbox.length; i++){
             if(checkbox[i].value == "Fiction" && item.genre[1] == "Fiction"){
@@ -192,36 +190,23 @@ window.addEventListener("DOMContentLoaded", function(){
             }
         }
         
-        g('age').value = item.age[1];
-        g('subject').value = item.subject[1];
-        g('rate').value = item.rate[1];
-        g('comments').value = item.comments[1];
+        $('age').value = item.age[1];
+        $('subject').value = item.subject[1];
+        $('rate').value = item.rate[1];
+        $('comments').value = item.comments[1];
         
-        
-        
-        
-        
-       
-                   //Remove the initial listener form in input save cotact button.
+        //Remove the initial listener form in input save cotact button.
         save.removeEventListener("click", storeData);
         //change the submit button value to edit button.
-        g('submit').value = "Edit Information";
-        var editSubmit = g('submit');
+        $('submit').value = "Edit Information";
+        var editSubmit = $('submit');
         //save the keys value in this function as a property of the editSubmit event.
         //so we can use that valuewhen we save the date ed edited
         editSubmit.addEventListener("click", validate);
         editSubmit.key = this.key;    
-    
     }
-     
     
- 
-      
-    
-    
-    
-    
-        //Makeing item links.
+     //Makeing item links.
     //Creat a edit and delete links for our stored items when displayed.
     function makeItemLinks(key, linksLi){
         //add edit singe item link
@@ -233,19 +218,10 @@ window.addEventListener("DOMContentLoaded", function(){
         editLink.innerHTML = editText;
         linksLi.appendChild(editLink);
         
-    
-
-       
-        
-        
         //add a line break
         var breakTag = document.createElement('br');
         linksLi.appendChild(breakTag);
-    
-    
-    
-    
-    
+        
     function deleteItem(){
         var ask = confirm("Are you sure you want to delete this information?");
         if(ask){
@@ -257,14 +233,7 @@ window.addEventListener("DOMContentLoaded", function(){
         }
     }
     
-    
-    
-    
-   
-    
-    
-    
-         //add delete single item link
+        //add delete single item link
         var deleteLink = document.createElement('a');
         deleteLink.href = "#";
         deleteLink.key = key;
@@ -273,13 +242,6 @@ window.addEventListener("DOMContentLoaded", function(){
         deleteLink.innerHTML = deleteText;
         linksLi.appendChild(deleteLink);
     }
-
-    
-    
-   
-    
-    
-    
     
     function clearLocal(){
         if(localStorage.length === 0){
@@ -292,15 +254,13 @@ window.addEventListener("DOMContentLoaded", function(){
         }
     }
     
-    
-    
     function validate(e){
         //deffine the elements we want to check
-        var getLists = g('lists');
-        var getAuthor = g('author');
-        var getTitle = g('title');
-        var getAge = g('age');
-        var getSubject = g('subject');
+        var getLists = $('lists');
+        var getAuthor = $('author');
+        var getTitle = $('title');
+        var getAge = $('age');
+        var getSubject = $('subject');
         
         //Reset error Messages
         errMsg.innerHTML = "";
@@ -361,19 +321,13 @@ window.addEventListener("DOMContentLoaded", function(){
             storeData(this.key);
         }            
     }
-    
-    
-    
-  
-    
-    
-        //Sat Link & Submit Click Events
-    var displayLink = g('displayLink');
+       
+    //Sat Link & Submit Click Events
+    var displayLink = $('displayLink');
     displayLink.addEventListener("click",  getData);
-    var clearLink = g('clear');
+    var clearLink = $('clear');
     clearLink.addEventListener("click", clearLocal);
-    var save = g('submit');
-    save.addEventListener("click", validate);      
-   
+    var save = $('submit');
+    save.addEventListener("click", validate);
 
 });
