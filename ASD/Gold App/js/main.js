@@ -7,7 +7,7 @@
 window.addEventListener("DOMContentLoaded", function(){
     
     //getElementById Function
-        function $(x){
+        function g(x){
             var theElement = document.getElementById(x);
             return theElement;
     }
@@ -15,14 +15,14 @@ window.addEventListener("DOMContentLoaded", function(){
     // variable defaults
     var ageGroup = ["--Select Age Group--", "0-2", "3-5", "6-8", "9-12", "Teen", "Adult" ],
         genreValue,
-        errMsg = $('errors');
+        errMsg = g('errors');
     ;
     
     
          //Creating a select field element and option
     function makeCats(){
         var formTag = document.getElementsByTagName("form"), // this is a array of all the from tags.
-            selectLi = $('select'),
+            selectLi = g('select'),
             makeSelect = document.createElement('select');
             makeSelect.setAttribute("id", "age");
         for(var i=0, j=ageGroup.length; i<j; i++){
@@ -50,17 +50,17 @@ window.addEventListener("DOMContentLoaded", function(){
     function toggleControls(n){
         switch(n){
             case "on":
-                $('bookForm').style.display = "none";
-                $('clear').style.display = "inline";
-                $('displayLink').style.display = "none";
-                $('addNew').style.display = "inline";
+                g('bookForm').style.display = "none";
+                g('clear').style.display = "inline";
+                g('displayLink').style.display = "none";
+                g('addNew').style.display = "inline";
                 break;
             case "off":
-                $('bookForm').style.display = "block";
-                $('clear').style.display = "inline";
-                $('displayLink').style.display = "inline";
-                $('addNew').style.display = "none";
-                $('items').style.display = "none";
+                g('bookForm').style.display = "block";
+                g('clear').style.display = "inline";
+                g('displayLink').style.display = "inline";
+                g('addNew').style.display = "none";
+                g('items').style.display = "none";
                 break;
             default:
                 return false;
@@ -82,23 +82,23 @@ window.addEventListener("DOMContentLoaded", function(){
         //Object properties contain array with the form label and iput value.
         getSelectedcheckbox();
         var item                        = {};
-            item.lists                    = ["Lists:", $('lists').value];
-            item.author                    = ["Author:", $('author').value];
-            item.date1                    = ["Date1", $('date1').value];
-            item.website                = ["Website", $('website').value];
-            item.birth                    = ["Birth", $('birth').value];
-            item.biography                = ["Biography", $('biography').value];
-            item.books                    = ["Books", $('books').value];
-            item.title                    = ["Title:", $('title').value];
-            item.author1                = ["Author1", $('author1').value];
-            item.date2                    = ["Date2", $('date2').value];
-            item.description            = ["Description", $('description').value];
-            item.date                    = ["Date", $('date').value];
+            item.lists                    = ["Lists:", g('lists').value];
+            item.author                    = ["Author:", g('author').value];
+            item.date1                    = ["Date1", g('date1').value];
+            item.website                = ["Website", g('website').value];
+            item.birth                    = ["Birth", g('birth').value];
+            item.biography                = ["Biography", g('biography').value];
+            item.books                    = ["Books", g('books').value];
+            item.title                    = ["Title:", g('title').value];
+            item.author1                = ["Author1", g('author1').value];
+            item.date2                    = ["Date2", g('date2').value];
+            item.description            = ["Description", g('description').value];
+            item.date                    = ["Date", g('date').value];
             item.genre                    = ["Genre:", genreValue];
-            item.age                    = ["Age:", $('age').value];
-            item.subject                = ["Subject:", $('subject').value];
-            item.rate                    = ["Rate", $('rate').value];
-            item.comments                = ["Comments", $('comments').value];
+            item.age                    = ["Age:", g('age').value];
+            item.subject                = ["Subject:", g('subject').value];
+            item.rate                    = ["Rate", g('rate').value];
+            item.comments                = ["Comments", g('comments').value];
         //Save data into Local Storage: Use Stringify to convert our object to a string.
         localStorage.setItem("id", JSON.stringify(item));
         alert("Save");
@@ -136,7 +136,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var makeList = document.createElement('ul');
         makeDiv.appendChild(makeList);
         document.body.appendChild(makeDiv);
-        $('items').style.display = "block";
+        g('items').style.display = "block";
         for(var i=0, len=localStorage.length; i<len;i++){
             var makeli = document.createElement('li');
             var linksLi = document.createElement('li');
@@ -169,18 +169,18 @@ window.addEventListener("DOMContentLoaded", function(){
         toggleControls("off");
         
         //poplate the form fields with current localStorage values.
-        $('lists').value = item.lists[1];
-        $('author').value = item.author[1];
-        $('date1').value = item.date1[1];
-        $('website').value = item.website[1];
-        $('birth').value = item.birth[1];
-        $('biography').value = item.biography[1];
-        $('books').value = item.books[1];
-        $('title').value = item.title[1];
-        $('author1').value = item.author1[1];
-        $('date2').value = item.date2[1];
-        $('description').value = item.description[1];
-        $('date').value = item.date[1];
+        g('lists').value = item.lists[1];
+        g('author').value = item.author[1];
+        g('date1').value = item.date1[1];
+        g('website').value = item.website[1];
+        g('birth').value = item.birth[1];
+        g('biography').value = item.biography[1];
+        g('books').value = item.books[1];
+        g('title').value = item.title[1];
+        g('author1').value = item.author1[1];
+        g('date2').value = item.date2[1];
+        g('description').value = item.description[1];
+        g('date').value = item.date[1];
         var checkbox = document.forms(0).genre;
         for (var i=0; i<checkbox.length; i++){
             if(checkbox[i].value == "Fiction" && item.genre[1] == "Fiction"){
@@ -190,16 +190,16 @@ window.addEventListener("DOMContentLoaded", function(){
             }
         }
         
-        $('age').value = item.age[1];
-        $('subject').value = item.subject[1];
-        $('rate').value = item.rate[1];
-        $('comments').value = item.comments[1];
+        g('age').value = item.age[1];
+        g('subject').value = item.subject[1];
+        g('rate').value = item.rate[1];
+        g('comments').value = item.comments[1];
         
         //Remove the initial listener form in input save cotact button.
         save.removeEventListener("click", storeData);
         //change the submit button value to edit button.
-        $('submit').value = "Edit Information";
-        var editSubmit = $('submit');
+        g('submit').value = "Edit Information";
+        var editSubmit = g('submit');
         //save the keys value in this function as a property of the editSubmit event.
         //so we can use that valuewhen we save the date ed edited
         editSubmit.addEventListener("click", validate);
@@ -256,11 +256,11 @@ window.addEventListener("DOMContentLoaded", function(){
     
     function validate(e){
         //deffine the elements we want to check
-        var getLists = $('lists');
-        var getAuthor = $('author');
-        var getTitle = $('title');
-        var getAge = $('age');
-        var getSubject = $('subject');
+        var getLists = g('lists');
+        var getAuthor = g('author');
+        var getTitle = g('title');
+        var getAge = g('age');
+        var getSubject = g('subject');
         
         //Reset error Messages
         errMsg.innerHTML = "";
@@ -323,11 +323,11 @@ window.addEventListener("DOMContentLoaded", function(){
     }
        
     //Sat Link & Submit Click Events
-    var displayLink = $('displayLink');
+    var displayLink = g('displayLink');
     displayLink.addEventListener("click",  getData);
-    var clearLink = $('clear');
+    var clearLink = g('clear');
     clearLink.addEventListener("click", clearLocal);
-    var save = $('submit');
+    var save = g('submit');
     save.addEventListener("click", validate);
 
 });
