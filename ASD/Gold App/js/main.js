@@ -4,7 +4,7 @@
 // main.js
 
 // Wait until the DON is ready.
-window.addEventListener("DOMContentLoaded", function(){
+window.findEventListener("DOMContentLoaded", function(){
     
     //getElementById Function
         function g(x){
@@ -18,8 +18,7 @@ window.addEventListener("DOMContentLoaded", function(){
         errMsg = g('errors');
     ;
     
-    
-         //Creating a select field element and option
+     //Creating a select field element and option
     function makeCats(){
         var formTag = document.getElementsByTagName("form"), // this is a array of all the from tags.
             selectLi = g('select'),
@@ -29,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function(){
             var makeOption = document.createElement('option');
             var optText = ageGroup[i];
             makeOption.setAttribute("value", optText);
-            makeOption.innerHTML = optText;
+            makeOption.html = optText;
             makeSelect.appendChild(makeOption);
         }
         selectLi.appendChild(makeSelect);
@@ -50,17 +49,17 @@ window.addEventListener("DOMContentLoaded", function(){
     function toggleControls(n){
         switch(n){
             case "on":
-                g('bookForm').style.display = "none";
-                g('clear').style.display = "inline";
-                g('displayLink').style.display = "none";
-                g('addNew').style.display = "inline";
+                g('bookForm').css.display = "none";
+                g('clear').css.display = "inline";
+                g('displayLink').css.display = "none";
+                g('addNew').css.display = "inline";
                 break;
             case "off":
-                g('bookForm').style.display = "block";
-                g('clear').style.display = "inline";
-                g('displayLink').style.display = "inline";
-                g('addNew').style.display = "none";
-                g('items').style.display = "none";
+                g('bookForm').css.display = "block";
+                g('clear').css.display = "inline";
+                g('displayLink').css.display = "inline";
+                g('addNew').css.display = "none";
+                g('items').css.display = "none";
                 break;
             default:
                 return false;
@@ -68,7 +67,6 @@ window.addEventListener("DOMContentLoaded", function(){
         }
     }
     
-   
     function storeData(key){
         //Set the id to the existing key so it will save over the date.
         //The key is the sme key to be passed along the from the editsubmit event handler
@@ -104,7 +102,7 @@ window.addEventListener("DOMContentLoaded", function(){
         alert("Save");
     }
     
-        //Get right image to the category.
+    //Get right image to the category.
     function getImage(catName, makeSubList){
         var imageLi = document.createElement('li');
         makeSubList.appendChild(imageLi);
@@ -136,7 +134,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var makeList = document.createElement('ul');
         makeDiv.appendChild(makeList);
         document.body.appendChild(makeDiv);
-        g('items').style.display = "block";
+        g('items').css.display = "block";
         for(var i=0, len=localStorage.length; i<len;i++){
             var makeli = document.createElement('li');
             var linksLi = document.createElement('li');
@@ -152,14 +150,13 @@ window.addEventListener("DOMContentLoaded", function(){
                 var makeSubli = document.createElement('li');
                 makeSubList.appendChild(makeSubli);
                 var optSubText = obj[n][0]+" "+obj[n][1];
-                makeSubli.innerHTML = optSubText;
+                makeSubli.html = optSubText;
                 makeSubList.appendChild(linksLi);
             }
             makeItemLinks(localStorage.key(i), linksLi); //Creat our edit and delete buttons link for our item in local storage.
         }
     }
     
-   
     function editItem(){
         //Get the date from our item form in local storage.
         var value = localStorage.getItem(this.key);
@@ -202,7 +199,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var editSubmit = g('submit');
         //save the keys value in this function as a property of the editSubmit event.
         //so we can use that valuewhen we save the date ed edited
-        editSubmit.addEventListener("click", validate);
+        editSubmit.findEventListener("click", validate);
         editSubmit.key = this.key;    
     }
     
@@ -214,8 +211,8 @@ window.addEventListener("DOMContentLoaded", function(){
         editLink.href = "#";
         editLink.key = key;
         var editText = "Edit Information";
-        editLink.addEventListener("click", editItem);
-        editLink.innerHTML = editText;
+        editLink.findEventListener("click", editItem);
+        editLink.html = editText;
         linksLi.appendChild(editLink);
         
         //add a line break
@@ -238,8 +235,8 @@ window.addEventListener("DOMContentLoaded", function(){
         deleteLink.href = "#";
         deleteLink.key = key;
         var deleteText = "Delete Information";
-        deleteLink.addEventListener("click", deleteItem);
-        deleteLink.innerHTML = deleteText;
+        deleteLink.findEventListener("click", deleteItem);
+        deleteLink.html = deleteText;
         linksLi.appendChild(deleteLink);
     }
     
@@ -263,47 +260,47 @@ window.addEventListener("DOMContentLoaded", function(){
         var getSubject = g('subject');
         
         //Reset error Messages
-        errMsg.innerHTML = "";
-        getLists.style.border = "1px solid black";
-        getAuthor.style.border = "1px solid black";
-        getTitle.style.border = "1px solid black";
-        getAge.style.border = "1px solid black";
-        getSubject.style.border = "1px solid black";
+        errMsg.html = "";
+        getLists.css.border = "1px solid black";
+        getAuthor.css.border = "1px solid black";
+        getTitle.css.border = "1px solid black";
+        getAge.css.border = "1px solid black";
+        getSubject.css.border = "1px solid black";
         
         //get error messages
         var messageAry = [];
         //group validation
         if(getLists.value === "--Choose A List--"){
             var listsError = "Please choose a list.";
-            getLists.style.border = "1px solid red";
+            getLists.css.border = "1px solid red";
             messageAry.push(listsError);
         }
         
         // Author Name Validation
         if(getAuthor.value === ""){
             var authorError = "Please Enter A Author Name.";
-            getAuthor.style.border = "1px solid red";
+            getAuthor.css.border = "1px solid red";
             messageAry.push(authorError);
         }
         
         // Title Validation
         if(getTitle.value === ""){
             var titleError = "Please Enter A Title.";
-            getTitle.style.border = "1px solid red";
+            getTitle.css.border = "1px solid red";
             messageAry.push(titleError);
         }
         
         //Age validation
         if(getAge.value === "--Select Age Group--"){
             var ageError = "Select A Age Group.";
-            getAge.style.border = "1px solid red";
+            getAge.css.border = "1px solid red";
             messageAry.push(ageError);
         }
         
         //Subject Validation
         if(getSubject.value === ""){
             var subjectError = "Choose A Subject.";
-            getSubject.style.border = "1px solid red";
+            getSubject.css.border = "1px solid red";
             messageAry.push(subjectError);
         }
         
@@ -311,7 +308,7 @@ window.addEventListener("DOMContentLoaded", function(){
         if(messageAry.length >= 1){
             for(var i=0, j=messageAry.length; i < j; i++){
                 var txt = document.createElement('li');
-                txt.innerHTML = messageAry[i];
+                txt.html = messageAry[i];
                 errMsg.appendChild(txt);
             }
             e.preventDefault();
@@ -324,10 +321,10 @@ window.addEventListener("DOMContentLoaded", function(){
        
     //Sat Link & Submit Click Events
     var displayLink = g('displayLink');
-    displayLink.addEventListener("click",  getData);
+    displayLink.findEventListener("click",  getData);
     var clearLink = g('clear');
-    clearLink.addEventListener("click", clearLocal);
+    clearLink.findEventListener("click", clearLocal);
     var save = g('submit');
-    save.addEventListener("click", validate);
+    save.findEventListener("click", validate);
 
 });
