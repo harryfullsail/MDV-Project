@@ -742,23 +742,24 @@
 		
 			<form action"" method="post" id="addbookinfoform">
 			
-				<label for="select-choice-0" class="select">Book Listed:</label>
-				<select name="select-choice-0" id="select-choice-1">
-   					<option value="Choose A List">Choose A Book List</option>
-   					<option value="Books Read">Books Read</option>
-   					<option value="Books I will read">Books I will read</option>
-   					<option value="Books I might read">Books I might read</option>
-				</select>
-				
 				<div data-role="fieldcontain">
-					<label for ="dateraed">Date Read:</label>
-					<input type="date" name="dateraed" id="dateraed" />
+					<label for="select-book-listed">Book Listed:</label>
+					<select name="select-book-listed" id="select-book-listed" data-native-menu="false" class="required">
+   						<option data-placeholer="true">Choose A Book List</option>
+   						<option value="Books Read">Books Read</option>
+   						<option value="Books I will read">Books I will read</option>
+   						<option value="Books I might read">Books I might read</option>
+					</select>
 				</div>
 				
 				<div data-role="fieldcontain">
-					<label for ="author">Author Name: required field</label>
-					<input type="text" name="author" id="author" placeholder="First name then Last name" />
-					<p>First name and Last name</p> 
+					<label for ="dateraed">Date Read:</label>
+					<input type="date" name="dateraed" id="dateraed" class="required" />
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for ="author">Author Name:</label>
+					<input type="text" name="author" id="author" class="required" placeholder="First name then Last name" /> 
 					
 				</div>
 				
@@ -789,7 +790,7 @@
 				
 				<div data-role="fieldcontain">
 					<label for ="title">Book Title:</label>
-					<input type="text" name="title" id="title" />
+					<input type="text" name="title" id="title" class="required" />
 				</div>
 				
 				<div data-role="fieldcontain">
@@ -803,29 +804,32 @@
 				</div>
 				
 				<div data-role="fieldcontain">
-					<legend>Genre:</legend>
-					<label><input type="checkbox" name="checkbox-1" />Fiction</label>
-					<input type="checkbox" name="checkbox-0" id="checkbox-0" class="custom" />
-					<label for="checkbox-0">Nonfiction</label>
+					<fieldset data-role="controlgroup">
+						<legend>Genre:</legend>
+						<input type="checkbox" value="Fiction" name="fiction" id="fiction" class="required" />
+						<label for="fiction">Fiction</label>
+						<input type="checkbox" vallue="Nonfiction" name="nonfiction" id="nonfiction" />
+						<label for="nonfiction">Nonfiction</label>
+					</fieldset>
 				</div>
 				
 				<div data-role="fieldcontain">
-				<label for="select-choice-0" class="select">Age Group: required field</label>
-				<select name="select-choice-0" id="select-choice-1">
-   					<option value="Select Age Group">Select Age Group</option>
-   					<option value="0-2">0-2</option>
-   					<option value="3-5">3-5</option>
-   					<option value="6-8">6-8</option>
-   					<option value="9-12">9-12</option>
-   					<option value="Teen">Teen</option>
-   					<option value="Adult">Adult</option>
-				</select>
+					<label for="age">Age Group:</label>
+					<select name="age" id="age" data-native-menu="false" class="required">
+   						<option data-placeholder="true">Please Select A Age Group</option>
+   						<option value="0-2">0-2</option>
+   						<option value="3-5">3-5</option>
+   						<option value="6-8">6-8</option>
+   						<option value="9-12">9-12</option>
+   						<option value="Teen">Teen</option>
+   						<option value="Adult">Adult</option>
+					</select>
 				</div>
 				
 				<div data-role="fieldcontain">
-				<label for="select-choice-0" class="select">Choose Subject of Book: required field</label>
-				<select name="select-choice-0" id="select-choice-1">
-   					<option value="select Subject of Book">Select Subject of Book</option>
+				<label for="subject selection">Choose Subject of Book:</label>
+				<select name="subject selection" id="subject selection" data-native-menu="false" class="required">
+   					<option data-placeholder="true">Select the Subject of the Book</option>
    					<option value="biographies">Biographies</option>
    					<option value="classics">Classics</option>
    					<option value="cookbook">Cookbook</option>
@@ -1230,8 +1234,10 @@
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script src="js/json.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main1.js"></script>
 
 </body>
 </html>
